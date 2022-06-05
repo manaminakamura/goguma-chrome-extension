@@ -1,0 +1,27 @@
+{
+	"name": "goguma-extention",
+	"version": "1.0.0",
+	"manifest_version": 3,
+	"description": "右クリックメニューから韓国語解析", 
+	"permissions" : [
+		"contextMenus",
+		"scripting",
+		"tabs"
+	],
+	"host_permissions" : [
+		"https://*/*"
+	],
+	"background" : {
+		"service_worker" : "background.js",
+		"type": "module"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"https://*/*"
+			],
+			"run_at":"document_start",
+			"js": ["content-script.js"]
+		}
+	]
+}
