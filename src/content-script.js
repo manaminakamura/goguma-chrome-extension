@@ -1,3 +1,7 @@
+import React from "react";
+import ReactDOM from "react-dom";
+import Hello from "./components/Hello";
+
 chrome.runtime.onMessage.addListener(
     (message, sender, sendResponse) => {
         sendResponse({ message: "response" }); 
@@ -32,4 +36,10 @@ const showModal = (data) => {
     dialog.querySelector("button").addEventListener("click", () => {
         dialog.close();
     });
+    ReactDOM.render(
+        <React.StrictMode>
+            <Hello />
+        </React.StrictMode>,
+        document.getElementById("popup-content")
+    );
 }
