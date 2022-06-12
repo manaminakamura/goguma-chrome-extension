@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Hello from "./components/Hello";
+import App from "./components/App";
 
 chrome.runtime.onMessage.addListener(
     (message, sender, sendResponse) => {
@@ -38,7 +38,7 @@ const showModal = (data) => {
     });
     ReactDOM.render(
         <React.StrictMode>
-            <Hello />
+            <App result={data} />
         </React.StrictMode>,
         document.getElementById("popup-content")
     );
