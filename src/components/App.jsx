@@ -1,5 +1,5 @@
 import React from "react";
-import { AnalysisResultArea } from "./AnalysisResultArea";
+import { AnalysisResultAreaContainer } from "./AnalysisResultAreaContainer";
 
-const App = ({ result }) => <AnalysisResultArea result={result} />;
+const App = ({ text }) => <AnalysisResultAreaContainer text={text} />;
 export default App;

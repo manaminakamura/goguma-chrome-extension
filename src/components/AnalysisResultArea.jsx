@@ -3,11 +3,16 @@ import classes from './AnalysisResultArea.module.css'
 import { Card } from '@mui/material';
 import { Tokens } from './Tokens'
 
-export const AnalysisResultArea = ({ result }) => {
+export const AnalysisResultArea = ({ text, isRequesting }) => {
+	const result = {};
 	console.log(result);
   return (
     <Card variant="outlined">
       <div className={classes.resultArea}>
+        <span>テキスト</span>
+        <p>
+        	<div>{text}</div>
+        </p>
         <span>日本語訳</span>
         <p>
         	<div>{result.translation}</div>
@@ -19,7 +24,7 @@ export const AnalysisResultArea = ({ result }) => {
         <span>品詞分解</span>
         <p>
           <div>
-            <Tokens tokens={result.tokens} />
+            <Tokens tokens={result.tokens || []} isRequesting={isRequesting} />
           </div>
         </p>
       </div>

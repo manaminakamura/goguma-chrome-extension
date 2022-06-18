@@ -11,7 +11,7 @@ chrome.runtime.onMessage.addListener(
     }
 );
 
-const showModal = (data) => {
+const showModal = (message) => {
     const modal = document.createElement("dialog");
     modal.setAttribute(
 			"style",`
@@ -36,7 +36,7 @@ const showModal = (data) => {
     });
     ReactDOM.render(
         <React.StrictMode>
-            <App result={data} />
+            <App text={message} />
         </React.StrictMode>,
         document.getElementById("popup-content")
     );
