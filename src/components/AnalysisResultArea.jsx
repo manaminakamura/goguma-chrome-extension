@@ -3,9 +3,7 @@ import classes from './AnalysisResultArea.module.css'
 import { Card } from '@mui/material';
 import { Tokens } from './Tokens'
 
-export const AnalysisResultArea = ({ text, isRequesting }) => {
-	const result = {};
-	console.log(result);
+export const AnalysisResultArea = ({ text, result, isRequesting }) => {
   return (
     <Card variant="outlined">
       <div className={classes.resultArea}>
