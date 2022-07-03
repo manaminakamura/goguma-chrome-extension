@@ -1,5 +1,9 @@
 import React from "react";
 import { AnalysisResultAreaContainer } from "./AnalysisResultAreaContainer";
 
-const App = ({ text }) => <AnalysisResultAreaContainer text={text} />;
+type PropType = {
+  text: string
+}
+
+const App: React.FC<PropType> = ({ text }) => <AnalysisResultAreaContainer text={text} />;
 export default App;

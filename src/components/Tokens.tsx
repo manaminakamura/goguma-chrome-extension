@@ -2,7 +2,11 @@ import React from "react";
 import { Card, Skeleton } from "@mui/material";
 import classes from "./Tokens.module.css";
 
-export const Tokens = ({ tokens, isRequesting }) => {
+type PropType = {
+  tokens: any
+  isRequesting: boolean
+}
+export const Tokens: React.FC<PropType> = ({ tokens, isRequesting }) => {
   return (
     <div className={classes.tokens}>
       {!isRequesting ? (

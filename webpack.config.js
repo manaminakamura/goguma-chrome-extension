@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   mode: "production",
-  entry: path.resolve(__dirname, "src/content-script.ts"),
+  entry: path.resolve(__dirname, "src/content-script.tsx"),
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "content.js",
@@ -19,7 +19,7 @@ module.exports = {
           {
             loader: "babel-loader",
             options: {
-              presets: ["@babel/preset-env", "@babel/preset-react"],
+              presets: ["@babel/preset-env", "@babel/preset-react", "@babel/preset-typescript"],
             },
           },
         ],
