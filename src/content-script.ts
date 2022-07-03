@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./components/App";
+import App from "./components/App.tsx";
 
 chrome.runtime.onMessage.addListener(
     (message, sender, sendResponse) => {

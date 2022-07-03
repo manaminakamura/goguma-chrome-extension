@@ -2,19 +2,19 @@ const path = require("path");
 
 module.exports = {
   mode: "production",
-  entry: path.resolve(__dirname, "src/content-script.js"),
+  entry: path.resolve(__dirname, "src/content-script.ts"),
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "content.js",
   },
   resolve: {
     modules: [path.resolve(__dirname, "node_modules")],
-    extensions: [".js", ".jsx"],
+    extensions: [".js", ".ts", ".tsx"],
   },
   module: {
     rules: [
       {
-        test: [/\.js$/, /\.jsx$/],
+        test: /\.(js|ts|tsx)$/,
         use: [
           {
             loader: "babel-loader",
