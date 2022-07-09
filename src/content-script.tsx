@@ -5,7 +5,6 @@ import App from "./components/App";
 chrome.runtime.onMessage.addListener(
   (message, sender, sendResponse) => {
     sendResponse({ message: "response" }); 
-    console.log(message);
     showModal(message);
     return true;
   }

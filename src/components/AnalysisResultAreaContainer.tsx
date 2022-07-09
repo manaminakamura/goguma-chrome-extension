@@ -14,7 +14,6 @@ export const AnalysisResultAreaContainer: React.FC<PropType> = ({ text }) => {
     fetch(url)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         setResult(data);
         setIsRequesting(false);
       });
