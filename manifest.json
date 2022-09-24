@@ -4,8 +4,7 @@
 	"manifest_version": 3,
 	"description": "右クリックメニューから韓国語解析。選択範囲の文章を品詞分解、ルビ振り、翻訳を行います。", 
 	"permissions" : [
-		"contextMenus",
-		"tabs"
+		"contextMenus"
 	],
 	"background" : {
 		"service_worker" : "src/background.js",
