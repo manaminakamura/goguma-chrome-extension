@@ -14,11 +14,11 @@ const showModal = (message) => {
   const modal = document.createElement("dialog");
   modal.setAttribute(
     "style",`
-			max-height: 450px;
+			max-height: 550px;
 			width: 600px;
 			border: none;
 			top: 150px;
-			border-radius: 10px;
+			border-radius: 4px;
 			background-color: white;
 			position: fixed;
 			`

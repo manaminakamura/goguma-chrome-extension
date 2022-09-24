@@ -8,7 +8,7 @@ type PropType = {
 export const AnalysisResultAreaContainer: React.FC<PropType> = ({ text }) => {
   const [result, setResult] = useState({});
   const [isRequesting, setIsRequesting] = useState(true);
-  const url = `https://django-konlpy-api-wbc37rju4a-uc.a.run.app/analysis?text=${text}`;
+  const url = `https://api.goguma.jp/analyze?text=${text}`;
   useEffect(() => {
     setIsRequesting(true);
     fetch(url)
