@@ -34,7 +34,7 @@ export const Tokens: React.FC<PropType> = ({ tokens, isRequesting }) => {
                   secondary={item.token} secondaryTypographyProps={tokenProps} />
               </ListItem>
               <ListItem disablePadding={true}>
-                <ListItemText primary={item.word_class} primaryTypographyProps={wordClassProps}
+                <ListItemText sx={{ margin: 0 }} primary={item.word_class} primaryTypographyProps={wordClassProps}
                   secondary={item.translation} secondaryTypographyProps={tranlationProps} />
               </ListItem>
             </List>
